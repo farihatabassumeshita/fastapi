@@ -40,6 +40,11 @@ def get_product_list(
         ge=1,
         le=100,
         description="Number of items to return"
+    ),
+    offset: int = Query(
+        default=0,
+        ge=0,
+        description="Pagination"
     )
 ):
     products = get_all_products()
